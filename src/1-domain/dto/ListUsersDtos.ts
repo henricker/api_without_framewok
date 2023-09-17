@@ -1,6 +1,6 @@
-import { IUserEntity } from "../../1-domain/entities/UserEntity";
+import { IUserEntity } from '../../1-domain/entities/UserEntity'
 
 export type InputListUsersDto = {
-    search?: string
+  search?: string
 }
 export type OutputListUsersDto = IUserEntity[]
