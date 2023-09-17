@@ -1,8 +1,7 @@
-
 export type MockedObject = {
-    mock: {
-        calls: {
-            arguments: any
-        }[]
-    }
+  mock: {
+    calls: {
+      arguments: any
+    }[]
+  }
 }
