@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "npx ts-node-dev -r tsconfig-paths/register --exit-child --respawn --transpile-only --inspect --ignore-watch node_modules ./src/4-infra/http/native/App.ts",
     "test": "glob -c \"node --loader tsx --no-warnings --test\" \"./test/**/*.{spec,test}.ts\"",
+    "build": "tsc && tsc-alias",
+    "start": "node ./build/src/4-infra/http/native/App.js",
     "lint": "npx eslint 'src/**/*.ts' --fix",
     "format": "prettier 'src/**/*.{ts,json}' --write"
   },
@@ -26,6 +28,7 @@
     "@types/node": "^20.6.2",
     "glob": "^10.3.4",
     "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.7",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^3.12.10",
     "typescript": "^5.2.2"

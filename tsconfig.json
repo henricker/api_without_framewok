@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "build",
     "baseUrl": ".",
     "target": "es2016",
     "module": "commonjs",
@@ -15,5 +16,5 @@
       "@presentation/*": ["src/3-presentation/*"],
       "@infra/*": ["src/4-infra/*"]
   },
-  }
+  },
 }
