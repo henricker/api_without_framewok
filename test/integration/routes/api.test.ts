@@ -44,7 +44,12 @@ describe('Integration', () => {
   describe('[POST] /api/files', () => {
     it('should return status code 422 if no file is sent', async () => {
       //Act
-      const response = await fetch(`${BASE_URL}/files`, { method: 'post' })
+      const response = await fetch(`${BASE_URL}/files`, {
+         method: 'post',
+         headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
       //Assert
       assert.equal(response.status, 422)
     })
@@ -53,6 +58,9 @@ describe('Integration', () => {
       const response = await fetch(`${BASE_URL}/files`, {
         method: 'post',
         body: invalidFileBuffer,
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       })
       //Assert
       assert.equal(response.status, 422)
@@ -66,6 +74,9 @@ describe('Integration', () => {
       const response = await fetch(`${BASE_URL}/files`, {
         method: 'post',
         body: validCsvFile,
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       })
       //Assert
       assert.equal(response.status, 201)
