@@ -1,11 +1,11 @@
-import { randomUUID } from 'node:crypto'
+import { randomUUID } from "crypto"
 
-import { IUserEntity } from '../../1-domain/entities/UserEntity'
-import {
-  IUserRepository,
-  ListUserRepositoryParams,
-} from '../../2-business/repositories/IUserRepository'
-import database from './database'
+import { IUserRepository, ListUserRepositoryParams } from "@business/repositories/IUserRepository"
+import { IUserEntity } from "@domain/entities/UserEntity"
+
+import database from "./database"
+
+
 
 export class UserRepository implements IUserRepository {
   private data: IUserEntity[] = database

@@ -1,4 +1,5 @@
-import { IUserEntity } from '../../1-domain/entities/UserEntity'
+import { IUserEntity } from "@domain/entities/UserEntity"
+
 
 export type InputListUsersDto = {
   search?: string

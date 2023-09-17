@@ -1,10 +1,13 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
 
-import { HttpListUsersController } from '../../../../src/3-presentation/controllers/HttpListUsersController'
-import { IHttpRequest } from '../../../../src/shared/protocols/http/IHttpRequest'
-import { MockedObject } from '../../mockedObject'
-import { ListUsersUseCaseMock } from '../../mocks/useCases/ListUsersUseCaseMock'
+import { HttpListUsersController } from '@presentation/controllers/HttpListUsersController'
+import { IHttpRequest } from '@shared/protocols/http/IHttpRequest'
+import { MockedObject } from '@test/unit/mockedObject'
+import { ListUsersUseCaseMock } from '@test/unit/mocks/useCases/ListUsersUseCaseMock'
+
+
+
 
 const makeSut = () => {
   const listUsersUseCase = new ListUsersUseCaseMock()

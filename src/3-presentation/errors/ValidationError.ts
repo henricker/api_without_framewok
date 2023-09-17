@@ -1,4 +1,5 @@
-import { BaseError } from '../../shared/errors/BaseError'
+import { BaseError } from "@shared/errors/BaseError"
+
 
 type ValidationErrorDetails = {
   field: string

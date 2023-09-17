@@ -1,8 +1,6 @@
-import { IUserEntity } from '../../../../src/1-domain/entities/UserEntity'
-import {
-  IUserRepository,
-  ListUserRepositoryParams,
-} from '../../../../src/2-business/repositories/IUserRepository'
+import { IUserRepository, ListUserRepositoryParams } from "@business/repositories/IUserRepository"
+import { IUserEntity } from "@domain/entities/UserEntity"
+
 
 export class UserRepositoryMock implements IUserRepository {
   create(_: IUserEntity): Promise<void> {

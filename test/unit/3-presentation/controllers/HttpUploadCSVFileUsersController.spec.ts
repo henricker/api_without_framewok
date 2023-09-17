@@ -1,11 +1,13 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
 
-import { HttpUploadCSVFileUsersController } from '../../../../src/3-presentation/controllers/HttpUploadCSVFileUsersController'
-import { ValidationError } from '../../../../src/3-presentation/errors/ValidationError'
-import { IHttpRequest } from '../../../../src/shared/protocols/http/IHttpRequest'
-import { MockedObject } from '../../mockedObject'
-import { CreateUserUseCaseMock } from '../../mocks/useCases/CreateUserUseCaseMock'
+import { HttpUploadCSVFileUsersController } from '@presentation/controllers/HttpUploadCSVFileUsersController'
+import { ValidationError } from '@presentation/errors/ValidationError'
+import { IHttpRequest } from '@shared/protocols/http/IHttpRequest'
+import { MockedObject } from '@test/unit/mockedObject'
+import { CreateUserUseCaseMock } from '@test/unit/mocks/useCases/CreateUserUseCaseMock'
+
+
 
 const makeSut = () => {
   const createUserUseCase = new CreateUserUseCaseMock()

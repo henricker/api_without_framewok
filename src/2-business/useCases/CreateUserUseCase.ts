@@ -1,9 +1,7 @@
-import {
-  InputCreateUserDto,
-  OutputCreateUserDto,
-} from '../../1-domain/dto/CreateUserDtos'
-import { IUseCase } from '../../shared/protocols/IUseCase'
-import { IUserRepository } from '../repositories/IUserRepository'
+import { IUserRepository } from "@business/repositories/IUserRepository";
+import { InputCreateUserDto, OutputCreateUserDto } from "@domain/dto/CreateUserDtos";
+import { IUseCase } from "@shared/protocols/IUseCase";
+
 
 export class CreateUserUseCase
   implements IUseCase<InputCreateUserDto, OutputCreateUserDto>

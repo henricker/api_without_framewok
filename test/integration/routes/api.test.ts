@@ -2,9 +2,11 @@ import assert from 'node:assert'
 import { IncomingMessage, Server, ServerResponse } from 'node:http'
 import { after, afterEach, before, describe, it } from 'node:test'
 
-import database from '../../../src/4-infra/db/database'
+import database from '@infra/db/database'
+
 import { BASE_URL } from '../util/BaseUrl'
 import { cleanDatabase } from '../util/cleanDatabase'
+
 
 const validCsvFile = `
 --X-INSOMNIA-BOUNDARY

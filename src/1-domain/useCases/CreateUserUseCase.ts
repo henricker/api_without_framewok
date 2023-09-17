@@ -1,5 +1,6 @@
-import { IUseCase } from '../../shared/protocols/IUseCase'
-import { InputCreateUserDto, OutputCreateUserDto } from '../dto/CreateUserDtos'
+import { InputCreateUserDto, OutputCreateUserDto } from "@domain/dto/CreateUserDtos";
+import { IUseCase } from "@shared/protocols/IUseCase";
+
 
 export interface ICreateUserUseCase
   extends IUseCase<InputCreateUserDto, OutputCreateUserDto> {}

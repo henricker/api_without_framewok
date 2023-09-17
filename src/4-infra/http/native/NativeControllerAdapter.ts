@@ -1,11 +1,8 @@
 import { IncomingMessage, ServerResponse } from 'http'
 
-import { IHttpController } from '../../../shared/protocols/http/IHttpController'
-import {
-  FileRequest,
-  IHttpRequest,
-} from '../../../shared/protocols/http/IHttpRequest'
-import { IsValidJSONString } from '../../../shared/util/IsValidJsonstring'
+import { IHttpController } from '@shared/protocols/http/IHttpController'
+import { FileRequest, IHttpRequest } from '@shared/protocols/http/IHttpRequest'
+import { IsValidJSONString } from '@shared/util/IsValidJsonstring'
 
 export class NativeHttpControllerAdapter {
   static adapt(controller: IHttpController) {

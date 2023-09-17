@@ -1,11 +1,12 @@
-import { IncomingMessage, ServerResponse } from 'http'
+import { IncomingMessage, ServerResponse } from "http"
 
-import { CreateUserUseCase } from '../../../2-business/useCases/CreateUserUseCase'
-import { ListUsersUseCase } from '../../../2-business/useCases/ListUsersUseCase'
-import { HttpListUsersController } from '../../../3-presentation/controllers/HttpListUsersController'
-import { HttpUploadCSVFileUsersController } from '../../../3-presentation/controllers/HttpUploadCSVFileUsersController'
-import { UserRepository } from '../../db/userRepository'
-import { NativeHttpControllerAdapter } from './NativeControllerAdapter'
+import { CreateUserUseCase } from "@business/useCases/CreateUserUseCase"
+import { ListUsersUseCase } from "@business/useCases/ListUsersUseCase"
+import { UserRepository } from "@infra/db/userRepository"
+import { HttpListUsersController } from "@presentation/controllers/HttpListUsersController"
+import { HttpUploadCSVFileUsersController } from "@presentation/controllers/HttpUploadCSVFileUsersController"
+
+import { NativeHttpControllerAdapter } from "./NativeControllerAdapter"
 
 export default {
   'post:/api/files': NativeHttpControllerAdapter.adapt(

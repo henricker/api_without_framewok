@@ -1,10 +1,12 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
 
-import { InputCreateUserDto } from '../../../../src/1-domain/dto/CreateUserDtos'
-import { CreateUserUseCase } from '../../../../src/2-business/useCases/CreateUserUseCase'
-import { MockedObject } from '../../mockedObject'
-import { UserRepositoryMock } from '../../mocks/repositories/UserRepositoryMock'
+import { CreateUserUseCase } from '@business/useCases/CreateUserUseCase'
+import { InputCreateUserDto } from '@domain/dto/CreateUserDtos'
+import { MockedObject } from '@test/unit/mockedObject'
+import { UserRepositoryMock } from '@test/unit/mocks/repositories/UserRepositoryMock'
+
+
 
 const makeSut = () => {
   const userRepository = new UserRepositoryMock()

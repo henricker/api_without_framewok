@@ -1,14 +1,13 @@
-import { InputCreateUserDto } from '../../1-domain/dto/CreateUserDtos'
-import { ICreateUserUseCase } from '../../1-domain/useCases/CreateUserUseCase'
-import { IHttpController } from '../../shared/protocols/http/IHttpController'
-import {
-  FileRequest,
-  IHttpRequest,
-} from '../../shared/protocols/http/IHttpRequest'
-import { IHttpResponse } from '../../shared/protocols/http/IHttpResponse'
-import { created } from '../../shared/protocols/http/responses'
-import { parseCSVtoJSON } from '../../shared/util/parseCSVtoJSON'
-import { ValidationError } from '../errors/ValidationError'
+import { InputCreateUserDto } from "@domain/dto/CreateUserDtos"
+import { ICreateUserUseCase } from "@domain/useCases/CreateUserUseCase"
+import { IHttpController } from "@shared/protocols/http/IHttpController"
+import { FileRequest, IHttpRequest } from "@shared/protocols/http/IHttpRequest"
+import { IHttpResponse } from "@shared/protocols/http/IHttpResponse"
+import { created } from "@shared/protocols/http/responses"
+import { parseCSVtoJSON } from "@shared/util/parseCSVtoJSON"
+
+import { ValidationError } from "../errors/ValidationError"
+
 
 export class HttpUploadCSVFileUsersController implements IHttpController {
   constructor(private readonly createUserUseCase: ICreateUserUseCase) {}
